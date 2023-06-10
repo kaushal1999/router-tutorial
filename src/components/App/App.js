@@ -33,7 +33,7 @@ class App extends Component {
             </ul>
           </nav>
           <Routes>
-            <Route exact path="/whale" element={<Whale></Whale>} />
+            <Route path="/whale" element={<Whale></Whale>} />
             <Route path="/whale/:type" element={<Whale></Whale>} />
             <Route path="/narwhal" element={<Narwhal></Narwhal>} />
             <Route path="/manatee" element={<Manatee></Manatee>} />

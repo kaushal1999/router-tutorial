@@ -1,16 +1,17 @@
 import React from "react";
-import { useLocation, useParams } from "react-router-dom";
+import { Route, useLocation, useParams } from "react-router-dom";
 import Beluga from "./Beluga";
 import Blue from "./Blue";
+import { useResolvedPath } from "react-router-dom";
+import { Routes } from "react-router-dom";
 
 export default function Whale() {
-    const { type } = useParams()
-    
+    const { type } = useParams();
     return (
       <div>
         <h2>whale</h2>
-            {type === "beluga" && <Beluga></Beluga>}
-            {type==="blue" && <Blue></Blue>}
+        {type === "blue" && <Blue></Blue>}
+        {type === "beluga" && <Beluga></Beluga>}
       </div>
     );
 }

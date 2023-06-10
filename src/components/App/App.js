@@ -24,10 +24,17 @@ class App extends Component {
                   <Link to="/narwhal">Narwhal</Link>
                 </li>
               </li>
+              <li>
+                <Link to="/whale/beluga">Beluga Whale</Link>
+              </li>
+              <li>
+                <Link to="/whale/blue">Blue Whale</Link>
+              </li>
             </ul>
           </nav>
           <Routes>
-            <Route path="/whale" element={<Whale></Whale>} />
+            <Route exact path="/whale" element={<Whale></Whale>} />
+            <Route path="/whale/:type" element={<Whale></Whale>} />
             <Route path="/narwhal" element={<Narwhal></Narwhal>} />
             <Route path="/manatee" element={<Manatee></Manatee>} />
           </Routes>
